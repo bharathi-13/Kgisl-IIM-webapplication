@@ -1,0 +1,49 @@
+<table>
+    <thead>
+
+      <form action="{{request.path}}" method="post">
+         <!-- Single Form Start -->
+         <div>
+             <input type="text"  name = "name" placeholder="Name">
+         </div>
+         <!-- Single Form End -->
+         <!-- Single Form Start -->
+         <div>
+             <input type="email" name = "email" placeholder="Email">
+         </div>
+         <!-- Single Form End -->
+         <!-- Single Form Start -->
+         <div>
+             <input type="password" name = "password" placeholder="Password">
+         </div>
+         <!-- Single Form End -->
+         <!-- Single Form Start -->
+         <div>
+             <input type="password" placeholder="Confirm Password">
+         </div>
+         <!-- Single Form End -->
+         <!-- Single Form Start -->
+         <div>
+             <button >Create an account</button>
+         </div>
+         <!-- Single Form End -->
+     </form>
+
+
+       <tr>
+          <th>Name</th>
+          <th>email</th>
+          <th>password</th>
+       </tr>
+    </thead>
+
+    <tbody>
+       {% for User in Users %}
+          <tr>
+             <td>{{ User.name }}</td>
+             <td>{{ User.email }}</td>
+             <td>{{ User.password }}</td>
+          </tr>
+       {% endfor %}
+    </tbody>
+</table>
